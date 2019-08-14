@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-import { PageComponent } from './page/page.component';
+import { TestPageComponent } from './test-page/test-page.component';
 import { ShellComponent } from './shell/shell.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
     component: ShellComponent,
     children: [
       { path: 'home', component: HomeComponent },
-      { path: 'page', component: PageComponent },
+      { path: 'test-page', component: TestPageComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   }

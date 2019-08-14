@@ -10,19 +10,23 @@ import { CacheItem } from '../cache-item';
   styleUrls: ['./shell.component.css']
 })
 export class ShellComponent implements OnInit, OnDestroy {
-  private _itemsSubscription: Subscription;
-  items: Array<CacheItem>;
+  //private _itemsSubscription: Subscription;
+  //items: Array<CacheItem>;
 
   constructor(private cache: CacheService) {
   }
 
   ngOnInit() {
-    this._itemsSubscription = this.cache.items.subscribe(items => {
-      this.items = items
-    });
+    //this._itemsSubscription = this.cache.items.subscribe(items => {
+    //  this.items = items
+    //});
   }
 
   ngOnDestroy() {
-    this._itemsSubscription.unsubscribe();
+    //this._itemsSubscription.unsubscribe();
+  }
+
+  get items(): Array<CacheItem> {
+    return this.cache.items;
   }
 }

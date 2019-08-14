@@ -7,13 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomeComponent } from './home/home.component';
-import { PageComponent } from './page/page.component';
+import { TestPageComponent } from './test-page/test-page.component';
 import { ShellComponent } from './shell/shell.component';
 import { CacheService } from './cache.service';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule, MatListModule, MatChipsModule, MatToolbarModule ],
-  declarations: [ AppComponent, HomeComponent, PageComponent, ShellComponent ],
+  declarations: [ AppComponent, HomeComponent, TestPageComponent, ShellComponent ],
   bootstrap:    [ AppComponent ],
   providers: [CacheService]
 })
