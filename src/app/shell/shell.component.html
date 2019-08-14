@@ -1,0 +1,11 @@
+<mat-toolbar>
+  <mat-chip-list>
+    <mat-chip>
+      <a routerLink="/home">Home</a>
+    </mat-chip>
+    <mat-chip *ngFor="let item of items">
+      <a routerLink="{{item.url}}">{{item.title}}</a>
+    </mat-chip>
+  </mat-chip-list>
+</mat-toolbar>
+<router-outlet></router-outlet>
